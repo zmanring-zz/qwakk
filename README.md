@@ -1,2 +1,3 @@
-# qwakk2
-### a Sails application
+# Qwakk
+
+a [Sails](http://sailsjs.org) application
