@@ -14,9 +14,9 @@ form(action='/user/create' method='POST')
     input(type='email' name='email' required)
   label
     | password
-    input(type='password' required)
+    input(type='password' name='password' required)
   label
     | confirm password
-    input(type='password' name='password' required)
+    input(type='password' name='confirmation' required)
 
   button(type='submit') Sign up for Qwakk
