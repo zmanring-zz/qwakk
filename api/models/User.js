@@ -15,9 +15,21 @@ module.exports = {
   	/* e.g.
   	nickname: 'string'
   	*/
-    name: {
+    username: {
       type: 'string',
-      required: true
+      required: true,
+      unique: true
+    },
+    email: {
+      type: 'email',
+      required: true,
+      unique: true
+    },
+    firstName: {
+      type: 'string'
+    },
+    lastName: {
+      type: 'string'
     },
     links: [{
 
