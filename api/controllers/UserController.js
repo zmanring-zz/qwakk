@@ -17,14 +17,22 @@
 
 module.exports = {
 
+  show: function (req, res, next) {
+    User.findOne(req.param('id'), function foundUser (err, user) {
 
+      console.log(err, user);
+
+    });
+  },
 
 
   /**
    * Overrides for the settings in `config/controllers.js`
    * (specific to UsersController)
    */
-  _config: {}
+  _config: {
+
+  }
 
 
 };

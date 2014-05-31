@@ -8,6 +8,8 @@
 
 module.exports = {
 
+  schema: true,
+
   attributes: {
 
   	/* e.g.
@@ -16,7 +18,17 @@ module.exports = {
     name: {
       type: 'string',
       required: true
-    }
+    },
+    links: [{
+
+      url: 'string',
+      tags: {
+        type: 'array'
+      },
+      description: 'string',
+      isPrivate: 'boolean',
+
+    }]
 
   }
 

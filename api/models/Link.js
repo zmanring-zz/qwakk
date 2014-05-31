@@ -13,19 +13,14 @@ module.exports = {
   	/* e.g.
   	nickname: 'string'
   	*/
-
-    description: {
-      type: 'string',
-      required: true
-    },
     url: {
       type: 'url',
       required: true
     },
-    private: 'boolean',
-    tags: [
-      'string'
-    ]
+    
+    users:{
+      model:'user'
+    }
 
   }
 

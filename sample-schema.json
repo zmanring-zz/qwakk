@@ -1,0 +1,29 @@
+{
+
+  "users": [{
+    "name": "zmanring",
+    "links": [{
+      "id": 1,
+      "title": "A short but sweet title",
+      "description": "Zmanrings description",
+      "tags": ["tag1", "tag2", "tag3"]
+    },{
+      "id": 2,
+      "title": "A short but sweet title",
+      "description": "Zmanrings description",
+      "tags": []
+    }]
+  }],
+
+  "links": {
+    "1": {
+      "url": "http://www.google.com",
+      "icon": "/favicon/http-www-google-com.png"
+    },
+
+    "2": {
+      "url": "http://www.yahoo.com",
+      "icon": "/favicon/http-www-yahoo-com.png"
+    }
+  }
+}
