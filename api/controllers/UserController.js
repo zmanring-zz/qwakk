@@ -34,6 +34,33 @@ module.exports = {
     });
   },
 
+  new: function (req, res, next) {
+    res.locals.flash = _.clone(req.session.flash);
+    console.log(res.locals.flash);
+    res.view();
+    req.session.flash = {};
+  },
+
+  create: function (req, res, next) {
+
+    User.create( req.params.all(), function userCreated(err, user) {
+      if (err) {
+        console.log(err);
+
+        req.session.flash = {
+          err: err
+        }
+
+        return res.redirect('/user/new');
+      }
+
+      res.json(user);
+      req.session.flash = {};
+
+    });
+
+  },
+
 
   /**
    * Overrides for the settings in `config/controllers.js`

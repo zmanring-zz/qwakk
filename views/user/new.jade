@@ -1,0 +1,22 @@
+form(action='/user/create' method='POST')
+  h2 Qwakk signup form
+
+  if flash && flash.err
+    ul
+      each error in flash.err
+        li=error
+
+  label
+    | username
+    input(type='text' name='username' required)
+  label
+    | email
+    input(type='email' name='email' required)
+  label
+    | password
+    input(type='password' required)
+  label
+    | confirm password
+    input(type='password' name='password' required)
+
+  button(type='submit') Sign up for Qwakk
