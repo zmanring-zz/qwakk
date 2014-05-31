@@ -1,7 +1,9 @@
 {
 
   "users": [{
-    "name": "zmanring",
+    "username": "zmanring",
+    "first-name": "zach",
+    "last-name": "manring",
     "links": [{
       "id": 1,
       "title": "A short but sweet title",
