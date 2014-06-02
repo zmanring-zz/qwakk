@@ -1,10 +1,12 @@
 /**
- * User
- *
- * @module      :: Model
- * @description :: A short summary of how this model works and what it represents.
- * @docs		:: http://sailsjs.org/#!documentation/models
- */
+* User
+*
+* @module      :: Model
+* @description :: A short summary of how this model works and what it represents.
+* @docs		:: http://sailsjs.org/#!documentation/models
+*/
+
+var bcrypt = require('bcrypt');
 
 module.exports = {
 
@@ -60,7 +62,7 @@ module.exports = {
       return next({err: ["Password doesn't match the confirmation value."]});
     }
 
-    require('bcrypt').hash(values.password, 10, function passwordEncrypted(err, encryptedPassword) {
+    bcrypt.hash(values.password, 10, function passwordEncrypted(err, encryptedPassword) {
       if (err) return next(err);
       values.encryptedPassword = encryptedPassword;
       next();

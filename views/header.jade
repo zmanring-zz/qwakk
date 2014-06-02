@@ -1,13 +1,22 @@
 header
   a(href='/')
     h1 Qwakk
-  aside
-    form
-      label
-        | username
-        input(type='text')
-      label
-        | password
-        input(type='password')
 
-      button(type='submit') login
+  aside
+    if !session.authenticated
+      form(action='/user/login' method='POST')
+        label
+          | username
+          input(type='text' name='username' required)
+        label
+          | password
+          input(type='password' name='password' required)
+
+        button(type='submit') login
+    else
+      ul
+        li
+          a(href='/user/profile')
+            != session.user.username
+        li
+          a(href='/session/destroy') Logout

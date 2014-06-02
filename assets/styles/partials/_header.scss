@@ -1,5 +1,5 @@
 body > header {
-  background-color: $color-primary;
+  background-color: rgba(#222, 0.9);
   height: 78px;
   width: 100%;
   display: table;
@@ -57,6 +57,21 @@ body > header {
 
       &:hover {
         background-color: darken($color-primary, 8%);
+      }
+    }
+
+    ul {
+      li {
+        display: inline-block;
+        margin-left: 15px;
+
+        a {
+          color: #fff;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
       }
     }
   }

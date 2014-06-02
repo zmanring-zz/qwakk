@@ -2,8 +2,8 @@
 
   "users": [{
     "username": "zmanring",
-    "first-name": "zach",
-    "last-name": "manring",
+    "firstName": "zach",
+    "lastName": "manring",
     "links": [{
       "id": 1,
       "title": "A short but sweet title",
@@ -20,12 +20,18 @@
   "links": {
     "1": {
       "url": "http://www.google.com",
-      "icon": "/favicon/http-www-google-com.png"
+      "icon": "/images/favicon/http-www-google-com.png",
+      "thumbnail": "/images/thumb/http-www-google-com.png",
+      "suggestedTags": [],
+      "saveCount": 1
     },
 
     "2": {
       "url": "http://www.yahoo.com",
-      "icon": "/favicon/http-www-yahoo-com.png"
+      "icon": "/images/favicon/http-www-yahoo-com.png",
+      "thumbnail": "/images/thumb/http-www-yahoo-com.png",
+      "suggestedTags": [],
+      "saveCount": 10
     }
   }
 }

@@ -5,13 +5,14 @@ block styles
 
 block body
 
-  h1 Welcome to Qwakk
-  h2 A new way to bookmark
+  header
+    h1 Welcome to Qwakk
+    h2 A new way to bookmark
 
   aside
     header
       h1 Become a member
-    
+
     .error
       if flash && flash.err
         ul
@@ -33,4 +34,4 @@ block body
         | confirm password
         input(type='password' name='confirmation' required)
 
-      button(type='submit') Sign up for Qwakk
+      button(type='submit') Sign up for your free account
