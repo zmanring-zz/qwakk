@@ -1,5 +1,8 @@
-h1
-  = user.name
+extends ../layout
 
-pre
-  = JSON.stringify(user)
+block body
+  h1
+    = user.name
+
+  pre
+    = JSON.stringify(user)

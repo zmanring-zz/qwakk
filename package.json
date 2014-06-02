@@ -35,5 +35,8 @@
     "url": "git://github.com/zmanring/qwakk2.git"
   },
   "author": "zmanring",
-  "license": ""
+  "license": "",
+  "devDependencies": {
+    "grunt-sass": "~0.12.1"
+  }
 }
