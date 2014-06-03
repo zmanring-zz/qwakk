@@ -17,7 +17,12 @@
 
 module.exports = {
 
-
+  new: function (req, res, next) {
+    res.locals.flash = _.clone(req.session.flash);
+    res.view();
+    req.session.flash = {};
+  },
+  
   /**
    * Overrides for the settings in `config/controllers.js`
    * (specific to LinksController)

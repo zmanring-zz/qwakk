@@ -19,6 +19,8 @@ header
           a(href='/user/profile')
             != session.user.username
         li
+          a(href='/link/new') Add link
+        li
           a(href='/session/destroy') Logout
 
 if session.flash && session.flash.message

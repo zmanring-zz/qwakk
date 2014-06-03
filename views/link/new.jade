@@ -1,0 +1,16 @@
+extends ../layout
+
+block body
+
+  form(action='/link/create' method='POST')
+
+    if flash && flash.err
+      ul
+        each error in flash.err
+          li=error
+
+    label
+      | url
+      input(type='text' name='url' required)
+
+    button(type='submit') Add link
