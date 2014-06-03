@@ -35,6 +35,7 @@
   "author": "zmanring",
   "license": "",
   "devDependencies": {
-    "grunt-sass": "~0.12.1"
+    "grunt-sass": "~0.12.1",
+    "grunt-autoprefixer": "~0.7.3"
   }
 }

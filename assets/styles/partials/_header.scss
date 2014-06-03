@@ -10,12 +10,32 @@ body > header {
     display: table-cell;
     vertical-align: middle;
     text-decoration: none;
+    white-space: nowrap;
 
     h1 {
       color: #fff;
       font-weight: 300;
-      margin: 0;
+      line-height: 0;
+      margin: 0 0 0 54px;
+      position: relative;
       text-transform: uppercase;
+      
+      &:before {
+        transform: translate(-100%, -50%) rotate(-90deg);
+        background-color: $color-primary;
+        color: lighten($color-primary, 20%);
+        content: "Qwakk";
+        font-size: 13px;
+        height: 44px;
+        left: -10px;
+        line-height: 74px;
+        position: absolute;
+        text-align: center;
+        text-transform: none;
+        top: 0;
+        width: 44px;
+      }
+
     }
 
     &:hover h1 {
