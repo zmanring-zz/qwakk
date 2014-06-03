@@ -43,7 +43,6 @@ module.exports = {
 
   new: function (req, res, next) {
     res.locals.flash = _.clone(req.session.flash);
-    console.log(res.locals.flash);
     res.view();
     req.session.flash = {};
   },
@@ -52,11 +51,12 @@ module.exports = {
 
     User.create( req.params.all(), function userCreated(err, user) {
       if (err) {
-        console.log(err);
 
         req.session.flash = {
           err: err
         }
+
+        console.log(req.session.flash);
 
         return res.redirect('/user/new');
       }
@@ -65,7 +65,7 @@ module.exports = {
       req.session.flash = {};
 
       // Redirect to the profile page
-      res.redirect('/user/profile/' + user.id);
+      res.redirect('/user/profile/');
 
     });
 
@@ -80,7 +80,11 @@ module.exports = {
 
       if (!user) {
         // handle if there is no user
-        res.redirect('/');
+        req.session.flash = {
+          message: {name: 'usernamePasswordMismatch', description: 'Invalid username or password', type: 'error'}
+        };
+
+        return res.redirect('/');
       }
 
       bcrypt.compare(values.password, user.encryptedPassword, function(err, valid) {
@@ -93,8 +97,17 @@ module.exports = {
           req.session.authenticated = true;
           req.session.user = user;
 
+          req.session.flash = {};
           res.redirect('/user/profile/');
 
+        } else {
+          // invaid password
+
+          req.session.flash = {
+            message: {name: 'usernamePasswordMismatch', description: 'Invalid username or password', type: 'error'}
+          };
+
+          res.redirect('/');
         }
 
       });

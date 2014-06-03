@@ -20,3 +20,7 @@ header
             != session.user.username
         li
           a(href='/session/destroy') Logout
+
+if session.flash && session.flash.message
+  .message-board(class='#{session.flash.message.type}')
+    != session.flash.message.description
