@@ -17,10 +17,13 @@ module.exports = {
       type: 'url',
       required: true
     },
-    
-    users:{
-      model:'user'
-    }
+
+    icon: 'string',
+    thumbnail: 'string',
+    tags: {
+      type: 'array'
+    },
+    saveCount: 'integer'
 
   }
 

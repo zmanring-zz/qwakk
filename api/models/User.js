@@ -38,12 +38,15 @@ module.exports = {
     },
     links: [{
 
-      url: 'string',
+      id: 'string',
+      title: 'string',
+      description: {
+        type: 'string',
+        limit: 140
+      },
       tags: {
         type: 'array'
-      },
-      description: 'string',
-      isPrivate: 'boolean',
+      }
 
     }],
 
